@@ -1,0 +1,99 @@
+<div id="tapar">
+  <img [src]="'/assets/logoSinFondo.png'" id="logo" href="#" [routerLink]="['/']">
+  <h1>Crear cuenta</h1>
+  <form #newUsr="ngForm">
+    <div align="center">
+      <div *ngIf="step==0" class="card" id="card1" style="width: 60%;" align="left">
+        <div class="card-body">
+          <h2 class="card-title">Primer paso</h2>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre</label>
+            <input type="text" class="form-control" [(ngModel)]="nombre" #nomEn="ngModel" name="nomEn"
+              placeholder="Inserta tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Primer Apellido</label>
+            <input type="text" class="form-control" [(ngModel)]="primerApellido" #ape1En="ngModel" name="ape1En"
+              placeholder="Inserta tu primer apellido" >
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Segundo Apellido</label>
+            <input type="text" class="form-control" [(ngModel)]="segundoApellido" #ape2En="ngModel" name="ape2En"
+              placeholder="Inserta tu segundo apellido" >
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Teléfono</label>
+            <input type="number" class="form-control" [(ngModel)]="telefono" #telEn="ngModel" name="telEn"
+              placeholder="Inserta tu teléfono" required>
+          </div>
+          <div align="center">
+            <button class="btn btn-primary" (click)="nextStep()" id="nextButton">Siguiente</button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="step==1" class="card" id="card2" style="width: 60%;" align="left">
+        <div class="card-body">
+          <div align="left" style="display:inline-flex">
+            <button class="btn btn-primary" (click)="backStep()" id="back">Atrás</button>
+          </div>
+          <h2 class="card-title" style="display:inline-flex; padding-left: 25% !important;">Segundo paso</h2>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Correo Electrónico</label>
+            <input type="email" class="form-control" [(ngModel)]="email" #corEn="ngModel" name="corEn"
+              placeholder="Inserta tu correo electrónico" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Contraseña</label>
+            <input type="password" class="form-control" [(ngModel)]="password" #passwordEn="ngModel" name="passwordEn"
+              placeholder="Inserta una contraseña" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">DNI</label>
+            <input type="text" class="form-control" [(ngModel)]="dni" #dniEn="ngModel" name="dniEn"
+              placeholder="Inserta tu DNI" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Fecha nacimiento</label>
+            <input type="date" class="form-control" [(ngModel)]="nacimiento" #nacEn="ngModel" name="nacEn" >
+          </div>
+          <div align="center">
+            <button class="btn btn-primary" (click)="nextStep()" id="nextButton">Siguiente</button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="step==2" class="card" id="card2" style="width: 60%;" align="left">
+        <div class="card-body">
+          <div align="left" style="display:inline-flex">
+            <button class="btn btn-primary" (click)="backStep()" id="back">Atrás</button>
+          </div>
+          <h2 class="card-title" style="display:inline-flex; padding-left: 27% !important;">Tercer paso</h2>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Ciudad</label>
+            <select class="form-control" [(ngModel)]="ciudad" #ciuEn="ngModel" name="ciuEn" required>
+              <option value="" disabled selected>Inserta tu ciudad</option>
+              <option *ngFor="let country of countries">{{country.nm}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Dirección</label>
+            <input type="text" class="form-control" [(ngModel)]="direccion" #dirEn="ngModel" name="dirEn"
+              placeholder="Inserte tu dirección" >
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Fotografía</label>
+            <input id="inputImagen" type="file" [(ngModel)]="foto" #fotoEn="ngModel" name="fotoEn"
+              (change)="handleFileInput($event)" >
+          </div>
+          <div align="center">
+            <button class="btn btn-primary" (click)="crearCuenta()" title="Crear cuenta" id="createAccount">Crear
+              cuenta</button>
+          </div>
+          <div id="imageUrl" style="display: none;">{{data|json}}</div>
+
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

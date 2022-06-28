@@ -1,0 +1,25 @@
+h1{
+    font-size: 48px;
+    margin-bottom: 3%;
+    padding-top: 4%;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 35px;
+    padding-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+p{
+    text-align: justify;
+    padding-right: 15%;
+    padding-left: 3%;
+    font-size: 15px;
+    padding-bottom: 1%;
+}
+
+#parrafoName{
+    padding-left: 5% !important;
+}

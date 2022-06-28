@@ -1,0 +1,43 @@
+<div id="tapar">
+  <img [src]="'/assets/logoSinFondo.png'" id="logo" href="#" [routerLink]="['/']">
+  <h1>
+    <ng-container *ngIf="servicioPedido=='null'">
+      TODOS LOS SERVICIOS
+    </ng-container>
+    <ng-container *ngIf="servicioPedido!='null'">
+      {{ servicioPedido.toUpperCase() }}
+    </ng-container>
+  </h1>
+
+  <ul id="buscador" class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <input type="text" placeholder="Buscar servicios" (keyup.enter)="sendit()" [(ngModel)]="search">
+    </li>
+    <!-- 
+      
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <button type="button" class="btn btn-primary" [routerLink]="['/mensajes']">Mensajes</button>
+      </li>
+    </ul>
+    -->
+  </ul>
+</div>
+<div style="margin-top: 13%; margin-left: 13%;">
+  <h2>Servicios:</h2>
+  <p id="anuncios">{{cantidadServicios}} servicios encontrados</p>
+  <ul>
+    <ng-container *ngFor="let servicio of servicios">
+      <li style="display: inline-block;  padding-top: 2%; margin-right: 2%;">
+        <div class="card" id="servicios" style="width: 30rem;" [routerLink]="['/vistaservicio',servicio.id]">
+          <img class="card-img-top" src="{{servicio.imagenes}}" style="margin-top: 5%; padding: 5%"
+            alt="Card image cap">
+          <div class="card-body" style="height: 100px;">
+            <h3 class="card-text"><b>{{servicio.nombre}}</b></h3>
+            <h5 class="card-text"><b>Descripción: </b>{{servicio.descripcion}}</h5>
+          </div>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+</div>

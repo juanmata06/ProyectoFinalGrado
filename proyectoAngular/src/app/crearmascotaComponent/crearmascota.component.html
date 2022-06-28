@@ -1,0 +1,49 @@
+<form #newServ="ngForm">
+  <div align="center">
+    <div class="card" style="width: 60%; margin-top: 4%;" align="left">
+      <h1>Crea tu mascota</h1>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" [(ngModel)]="nombre" #nomEn="ngModel" name="nomEn">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nombre de la mascota:</label>
+        <input type="text" class="form-control" [(ngModel)]="nombreMascota" #nomm="ngModel" name="nm">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Descripción:</label>
+        <br>
+        <textarea [(ngModel)]="descripcion" #desEn="ngModel" name="desEn" cols="30" rows="10"></textarea>
+      </div>
+      <div class="mb-3"> 
+        <label for="exampleInputPassword1" class="form-label">Tipo:</label>
+        <!--
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Selecciona</option>
+          <option value="Ave">Ave</option>
+          <option value="Pez">Pez</option>
+          <option value="Perro">Perro</option>
+          <option value="Gato">Gato</option>
+        </select>
+        -->
+        <select id="selectTipoMascota" name="selectTipoMascota" [(ngModel)]=tipoMascota >
+          <option option="tipo" *ngFor="let tipo of tipos">{{tipo}}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Precio:</label>
+        <input type="number" class="form-control" [(ngModel)]="precio" #preEn="ngModel" name="preEn">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Imagenes:</label>
+        <input id="inputImagen" type="file" [(ngModel)]="foto" #fotoEn="ngModel" name="fotoEn"
+        (change)="handleFileInput($event)" required>
+      </div>
+      <div align="center">
+        <button type="submit" class="btn btn-primary" (click)="crearMascota()">Crear</button>
+      </div>
+    </div>
+    <div id="imageUrl" style="display: none;">{{data|json}}</div>
+
+  </div>
+</form>

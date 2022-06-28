@@ -1,0 +1,60 @@
+<div align="center" style="background-color: #d2eeec; height: 1000px;">
+    <h1>Elige tu experiencia en PetKeepers</h1>
+    <p>Disponemos de varios planes destinados a satisfacer tus necesidades.</p>
+    <div class="card" id="card1" align="left">
+        <div class="card-body">
+            <h2 class="card-title">PAGO MENSUAL</h2>
+            <div class="form-group">
+                <p>Incluye....</p>
+                <ul>
+                    <li>Cuota de 9,99€</li>
+                    <li>Sin compromisos, cancela cuando quieras.</li>
+                </ul>
+            </div>
+            <div align="center">
+                <img src="./assets/peque.webp">
+                <button class="btn btn-primary"  id="nextButton" [routerLink]="['/crearSuscripcion',1]">Suscribirme</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" id="card2" align="left">
+        <div class="card-body">
+            
+            <h2 >PAGO SEMESTRAL</h2>
+            <div class="form-group">
+                <p>Incluye....</p>
+                <ul>
+                    <li>Cuota de 23,99€</li>
+                    <li>Ahorra x%</li>
+                    <li>Solo 3,99 € al mes</li>
+                    <li>Aparecerás en todas las busquedas</li>
+                    <li>Sin compromisos, cancela cuando quieras.</li>
+                </ul>
+            </div>
+            <div align="center">
+                <img src="./assets/mediano.webp">
+                <button class="btn btn-primary"  [routerLink]="['/crearSuscripcion',2]">Suscribirme</button>
+            </div>
+        </div>
+    </div>
+    <div  class="card" id="card3" align="left">
+        <div class="card-body">
+            <h2 class="card-title">PAGO ANUAL</h2>
+            <div class="form-group">
+                <p>Incluye....</p>
+                <ul>
+                    <li>Cuota de 45,99€</li>
+                    <li>Ahorra x%</li>
+                    <li>Solo 3,83 € al mes</li>
+                    <li>Aparecerás en todas las busquedas</li>
+                    <li>Sin compromisos, cancela cuando quieras.</li>
+                    <li>Sin anuncios</li>
+                </ul>
+            </div>
+            <div align="center">
+                <img src="./assets/grande.webp">
+                <button class="btn btn-primary"  [routerLink]="['/crearSuscripcion',3]">Suscribirme</button>
+            </div>
+        </div>
+    </div>
+</div>

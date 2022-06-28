@@ -1,0 +1,104 @@
+
+#singButton{
+    border-radius: 25px;
+    background-color: #39ACA2;
+    border-color: white;
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 40px;
+
+}
+
+#botonRed{
+    border-radius: 25px;
+    border-color: white;
+    background-color: #39ACA2;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    margin-left: 13%;
+}
+
+h1{
+    font-size: 50px !important;
+    padding-top: 35%;
+    font-weight: bold;
+}
+
+h3{
+    color: grey;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+button:focus{
+    background-color: #d2eeec;
+    color: black;
+}
+
+input{
+    border-radius: 25px;
+    background-color: #EEF5F3;
+    border-color: white;
+    width: 70%;
+    height: 40px;
+    font-size: 17px;
+
+    margin-top: 25px;
+}
+
+#login{
+    margin-left: 17%;
+    width: 70%;
+    float: left;
+    position: absolute;
+}
+
+#register{
+    width: 30%;
+    float: right;
+    top:0px;
+    right:0px;
+    bottom:-10px;
+    left:70%;
+    position: absolute;
+    background-color: #39ACA2;
+}
+
+#tapar{
+    width: 70%;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:30%;
+    position: absolute;
+    background-color: white;
+}
+
+#logButton{
+    color: black;
+    border-radius: 25px;
+    background-color: white;
+    border-color: transparent;
+    width: 60%;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 10%;
+
+}
+
+#title{
+    color: white;
+    text-align: center;
+    font-size: 50px !important;
+    padding-top: 60%;
+    font-weight: bold;
+}
+
+#texto{
+    color: white;
+    text-align: center; 
+    font-size: 20px;
+    padding-top: 8%;
+}

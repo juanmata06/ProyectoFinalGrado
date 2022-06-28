@@ -1,0 +1,26 @@
+<body style="font-family: Arial;">
+  <div id="tapar">
+    <div class="form-group" id="login"  align="center">
+      <h1>Inicia Sesión en tu Cuenta</h1>
+      <h3>Nunca compartiremos tu correo electrónico con nadie
+        más.</h3>
+
+
+      <hr style="color: grey;" width="70%" />
+
+      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Correo" [(ngModel)]="email">
+
+
+      <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="password"> <br>
+      <button (click)="loginJava()" class="btn btn-primary" id="singButton">Iniciar sesión</button> <br><br>
+    </div>
+  </div>
+
+  <div class="form-group" id="register">
+    <h2 id="title">¿Eres nuevo en PetKeeper?</h2>
+    <div id="texto">¡Crea una nueva cuenta y descubre cientos de servicios para tus queridas mascotas!</div>
+    <div align="center">
+      <button class="btn btn-primary" [routerLink]="['/crearcuenta']" id="logButton">Crear cuenta</button>
+    </div>
+  </div>
+</body>

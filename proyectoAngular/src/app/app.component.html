@@ -1,0 +1,73 @@
+<nav class="" style="background-color: #39ACA2; margin-bottom: 0px !important;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <div class="row">
+          <div class="col-1">
+            <img [src]="'/assets/logoSinFondo.png'" id="logo" href="#" [routerLink]="['/']">
+          </div>
+          <div class="col-11">
+            <input type="text" placeholder="Buscar servicios..." (keyup.enter)="sendit()" [(ngModel)]="search">
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="row">
+          <div class="col">
+            <button *ngIf="usuario.tipo_usuario==1 || usuario.tipo_usuario==-1" class="btn btn-primary" aria-current="page" [routerLink]="['/suscripciones']">
+              Suscripciones
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-primary btn-lg" aria-current="page" [routerLink]="['/servicio']">
+              Servicios
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-primary btn-lg" aria-current="page" [routerLink]="['/productos']">
+              Productos
+            </button>
+          </div>
+          <div class="col">
+            <button *ngIf="usuario.tipo_usuario!=1 && token==true" class="btn btn-primary btn-lg" aria-current="page" [routerLink]="['/mascotas']">
+              Mascotas
+            </button>
+          </div>
+          <div class="col">
+            <button *ngIf="token==false" class="btn btn-primary" aria-current="page" [routerLink]="['/login']">
+              Iniciar sesión
+            </button>
+          </div>
+          <div class="col">
+            <div class="dropdown" *ngIf="token==true">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                ≡
+              </button>
+              <div class="dropdown-menu" style=" border-radius: 10px 10px 10px 10px; padding: 3px;">
+                <button class="btn btn-primary" type="button" [routerLink]="['/perfil']">
+                  Perfil
+                </button>
+                <button *ngIf="usuario.tipo_usuario!=1" class="btn btn-primary" type="button" [routerLink]="['/crearServicio']">
+                  Nuevo servicio
+                </button>
+                <button class="btn btn-primary" type="button" [routerLink]="['/crearMascota']">
+                  Nueva mascota
+                </button>
+                <button class="btn btn-primary" aria-current="page" (click)="logout()">
+                  Cerrar Sesión
+                </button>
+              </div>
+            </div>
+            <div class="col">
+              <button *ngIf="token==false" class="btn btn-primary" aria-current="page" [routerLink]="['/crearcuenta']">
+                Registrarse
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

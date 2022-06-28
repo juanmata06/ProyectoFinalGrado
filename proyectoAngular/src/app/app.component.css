@@ -1,0 +1,69 @@
+#logo{
+  height: 50px;
+  background-color: #d2eeec;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button{
+  background-color: #d2eeec;
+  color: black;
+  border-color: #205f5a;
+  height: 40px;
+  width: 130px;
+  font-size: 17px;
+  border-radius: 15px;
+  margin-top: 12%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px;
+}
+
+#fondo{
+  height: 100%;
+  width: 100%;
+  position:absolute;
+}
+
+#lens{
+  background-color: transparent;
+  border: transparent;
+  margin-left: -30px;
+}
+
+input{
+  width: 90% !important;
+  height: 35px;
+  margin-top: 5px;
+  border-radius: 25px;
+  text-align: justify;
+  position: relative;
+  border-color: #0FB597;
+  border-width: 1px;
+  background-color: #EEF5F3;
+  padding-left: 20px;
+  font-size: 17px;
+  margin-top: 2%;
+}
+
+#top{
+  background-color: #d2eeec;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  border-color: #205f5a;
+}
+
+button:focus{
+  background-color: #d2eeec;
+  color: black;
+}

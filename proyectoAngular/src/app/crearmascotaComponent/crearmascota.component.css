@@ -1,0 +1,63 @@
+.card{
+    border-radius: 25px;
+    border-color: white;
+    background-color: #39ACA2;
+    border-color: #205f5a;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    padding-bottom: 5%;
+    padding-top: 3%;
+}
+button:focus{
+    background-color: #d2eeec;
+    color: black;
+}
+
+input{
+    border-radius: 25px;
+    background-color: #EEF5F3;
+    border-color: white;
+    width: 60%;
+    height: 40px;
+    font-size: 16px;
+    display: inline-flex;
+    color: grey;
+    padding-left: 2%;
+}
+
+label{
+    font-size: 20px;
+    margin-left: 10%;
+    width: 20%;
+}
+
+button{
+    background-color: #d2eeec;
+    color: black;
+    border-color: #205f5a;
+    height: 40px;
+    width: 130px;
+    font-size: 17px;
+    border-radius: 15px;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.form-select{
+    width: 60%;
+    display: inline-flex;
+    border-radius: 25px;
+    color: grey;
+    height: 38px;
+}
+
+textarea{
+    color: grey;
+    margin-left: 30%;
+    width: 60%;
+    border-radius: 25px;
+}

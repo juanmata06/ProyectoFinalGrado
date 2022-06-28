@@ -1,0 +1,54 @@
+<div id="card">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h1>{{ mascota.nombre_mascota }}</h1>
+    <button [routerLink]="['/comentarMascota',mascota.id]"
+      style="font-size: 20px; background-color: white !important; border-color: transparent !important; border-radius: 20px; margin-right: 100px; width: auto; height: 40px; font-weight: bold;">
+      COMENTAR
+    </button>
+  </div>
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="margin-top: 20px;">
+    <div>
+      <img src="{{ mascota.imagenes }}" class="d-block w-100 h-100" alt="...">
+    </div>
+  </div>
+  <div style="padding-top: 3%;">
+    <h2><b>Puntuación:</b> {{mascota.puntuacion}}</h2>
+    <h2><b>Descripción:</b> {{ mascota.descripcion }}</h2>
+    <h2><b>Tipo:</b> {{ mascota.tipo }}</h2>
+    <h2><b>Precio:</b> {{ mascota.precio }}</h2>
+    <br>
+  </div>
+  <div>
+    <h3><b>Usuario:</b></h3>
+    <h2>
+      <b>Nombre: </b>{{usuario.nombre}} {{usuario.primer_apellido}} {{usuario.segundo_apellido}}
+    </h2>
+    <h2>
+      <b>Email:</b> {{usuario.email}}
+    </h2>
+    <h2>
+      <b>Teléfono:</b> {{usuario.telefono}}
+    </h2>
+  </div>
+  <div style="padding-top: 5%;" align="center">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.6395378916245!2d2.1721671153473303!3d41.40363390295096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2dcd83dfb93%3A0x9bd8aac21bc3c950!2sBas%C3%ADlica%20de%20la%20Sagrada%20Fam%C3%ADlia!5e0!3m2!1ses!2ses!4v1648045716802!5m2!1ses!2ses"
+      width="400" height="300" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+  <br>
+  <div style="text-align: center;">
+    <h2 style="padding: 0;"><b>COMENTARIOS:</b></h2>
+    <ng-container *ngFor="let comentario of comentarios">
+      <div class="card" style="margin: 5%; border-radius: 10px 10px 10px 10px;">
+        <h4 class="card-title">{{comentario.nombre_suscriptor}}</h4>
+        <div class="card-body" style="height: 100px;">
+          <h4 class="card-text"><b>Ha comentado:</b></h4>
+          <h4 class="card-text">{{comentario.comentario}}</h4>
+          <h5 class="card-text"><b>Fecha: </b>{{comentario.fecha}}</h5>
+        </div>
+      </div>
+    </ng-container>
+    <br>
+  </div>
+</div>

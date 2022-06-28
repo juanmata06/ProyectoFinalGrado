@@ -1,0 +1,15 @@
+<form #newServ="ngForm">
+  <div align="center">
+    <div class="card" style="width: 60%; margin-top: 4%;" align="left">
+      <h1>Comenta el servicio</h1>
+      <div class="mb-3">
+        <label class="form-label">Comentario:</label>
+        <br>
+        <textarea [(ngModel)]="comentario" #desEn="ngModel" name="desEn" cols="30" rows="10"></textarea>
+      </div>
+      <div align="center">
+        <button type="submit" class="btn btn-primary" (click)="crearComentario()">Comentar</button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,53 @@
+#card{
+    background-color: #39ACA2;
+    margin-top: 4%;
+    width: 45%;
+    margin-left: 25%;
+    border-radius: 20px;
+    border-color: #205f5a;
+    margin-bottom: 2%;
+}
+
+h1{
+    font-size: 40px;
+    padding-top: 6%;
+    padding-left: 7%;
+    font-weight: bold;
+}
+
+#header{
+    display: flex;
+}
+
+.btn{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    outline:none;
+}
+#carouselExampleDark{
+    width: 60%;
+    margin: auto;
+}
+
+.carousel-indicators {
+    justify-content: center;
+    padding-left: 10%;
+}
+
+button:focus{
+    background-color: #d2eeec;
+    color: black;
+}
+
+p{
+    font-size: 18px;
+    padding-left: 10%;
+}
+
+h2{
+    padding-left: 10%;
+    padding-top: 1%;
+}
+

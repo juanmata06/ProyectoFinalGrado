@@ -1,0 +1,101 @@
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #39ACA2;
+    background-image: url("../../assets/up.png");
+    z-index: 100;
+}
+
+#carouselExampleDark{
+    width: 80%;
+    margin: auto;
+}
+
+.carousel-indicators {
+    justify-content: center;
+    padding-left: 10%;
+}
+
+#header{
+    background-color: #d2eeec;
+}
+
+#mejorMascotas{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around;
+}
+
+#txt{
+    text-align: center;
+}
+
+#bgc{
+    background-color: white;
+}
+
+#centro{
+    background-color: #39ACA2;
+    height: 2100px;
+}
+
+button:focus{
+    background-color: #d2eeec;
+    color: black;
+}
+
+h1{
+    font-size: 55px;
+    margin-bottom: 3%;
+    margin-top: 1%;
+}
+
+h2{
+    font-size: 40px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-weight: bold;
+}
+
+h3{
+    text-align: center;
+    color: grey;
+    font-weight: normal;
+    padding-top: 30px;
+}
+
+h5{
+    font-size: 16px;
+    padding-bottom: 2%;
+}
+
+#productos{
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius:  20px 20px 20px 20px;
+    -webkit-border-radius:  20px 20px 20px 20px;
+    border: 0px solid #000000;
+}
+
+.btn{
+    background-color: #d2eeec;
+    border-color: #205f5a;
+    color: black;
+    border-radius: 15px;
+}
+
+#prueba1{
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius:  20px 20px 20px 20px;
+    -webkit-border-radius:  20px 20px 20px 20px;
+    border: 0px solid #000000;
+    width: 15%;
+    background-color: white;
+}
+
+
+
+
+/* 
+justify-content: space-around;
+*/

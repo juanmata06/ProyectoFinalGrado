@@ -1,0 +1,174 @@
+<div align="center" style="padding-bottom: 5%; padding-top: 5%;">
+    <div id="card1">
+        <div class="container" align="left">
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{usuario.foto}}">
+                    <!--{{usuario.foto}}-->
+                </div>
+                <div class="col-4">
+                    <h2 style="padding-top: 10%; padding-bottom: 2%;">{{usuario.nombre}} {{usuario.primer_apellido}}
+                        {{usuario.segundo_apellido}} </h2>
+                    <div id="info">
+                        📩 Correo electrónico: {{usuario.email}}
+                    </div>
+                    <div id="info">
+                        📅 Fecha de nacimiento: {{usuario.nacimiento}}
+                    </div>
+                    <div id="info">
+                        📞 Teléfono: {{usuario.telefono}}
+                    </div>
+                    <div id="info">
+                        🌏 Dirección: {{usuario.ciudad}} {{usuario.direccion}}
+                    </div>
+                    <div id="info">
+                    </div>
+                    <div id="info">
+                        🐕 Mascotas: {{cantidadMascotas}}
+                    </div>
+                    <div id="info" *ngIf="usuario.tipo_usuario!=1">
+                        ✅ Servicios: {{cantidadServicios}}
+                    </div>
+                </div>
+                <div class="col-4" id="mapa" align="center">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.6395378916245!2d2.1721671153473303!3d41.40363390295096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2dcd83dfb93%3A0x9bd8aac21bc3c950!2sBas%C3%ADlica%20de%20la%20Sagrada%20Fam%C3%ADlia!5e0!3m2!1ses!2ses!4v1648045716802!5m2!1ses!2ses"
+                        width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button *ngIf="usuario.tipo_usuario!=1" class="btn btn-primary btn-lg" aria-current="page"
+                        (click)="services()">
+                        Servicios
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary btn-lg" aria-current="page" (click)="mascotasS()">
+                        Mascotas
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary btn-lg" aria-current="page" (click)="edit()">
+                        Editar perfil
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form *ngIf="step==1" #usuarioEditado="ngForm" class="card" id="card1">
+                        <h3 class="card-title">Edita tu información</h3>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Nombre</label>
+                            <input type="text" class="form-control" name="inputNombre" placeholder="Inserta tu nombre"
+                                [(ngModel)]=usuario.nombre required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Primer Apellido</label>
+                            <input type="text" class="form-control" name="inputPrimerApellido"
+                                placeholder="Inserta tu primer apellido" [(ngModel)]=usuario.primer_apellido required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Segundo Apellido</label>
+                            <input type="text" class="form-control" name="inputSegundoApellido"
+                                placeholder="Inserta tu segundo apellido" [(ngModel)]=usuario.segundo_apellido>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Correo Electrónico</label>
+                            <input type="email" class="form-control" name="inputCorreo"
+                                placeholder="Inserta tu correo electrónico" [(ngModel)]=usuario.email required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Contraseña</label>
+                            <input type="password" class="form-control" name="inputPassword"
+                                placeholder="Inserta tu contraseña" [(ngModel)]=usuario.password required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Fecha nacimiento</label>
+                            <input type="date" class="form-control" name="inputNacimiento"
+                                [(ngModel)]=usuario.nacimiento>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Teléfono</label>
+                            <input type="number" class="form-control" name="inputTelefono"
+                                placeholder="Inserta tu teléfono" [(ngModel)]=usuario.telefono required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">DNI</label>
+                            <input type="text" class="form-control" name="inputDni" placeholder="Inserta tu DNI"
+                                [(ngModel)]=usuario.dni required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Ciudad</label>
+                            <input type="text" class="form-control" name="inputCiudad" placeholder="Inserta tu ciudad"
+                                [(ngModel)]=usuario.ciudad>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Dirección</label>
+                            <input type="text" class="form-control" name="inputDireccion"
+                                placeholder="Inserta tu dirección" [(ngModel)]=usuario.direccion>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Fotografía</label>
+                            <input id="inputImagen" type="file" id="smallInputs" name="IMGEn">
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary btn-lg" type="submit" aria-current="page" (click)="editar(usuarioEditado)">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+
+                    <div *ngIf="service==1">
+                        <ng-container *ngFor="let servicio of servicios">
+                            <li style="display: inline-block;  padding-top: 2%; margin-right: 2%;">
+                                <div class="card" id="servicios" style="width: 30rem;"
+                                    [routerLink]="['/vistaservicio',servicio.id]">
+                                    <div align="center">
+                                        <img class="card-img-top" src="{{servicio.imagenes}}"
+                                            style="margin-top: 5%; padding: 5%" alt="Card image cap">
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h4 class="card-text"><b>{{servicio.nombre}}</b></h4>
+                                        <h5 class="card-text">{{servicio.descripcion}}</h5>
+                                        <br>
+                                        <button class="btn btn-primary btn-lg" aria-current="page">
+                                            Editar
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ng-container>
+                    </div>
+                    <div *ngIf="mascotaSelector==1">
+                        <ng-container *ngFor="let mascota of mascotas">
+                            <li style="display: inline-block;  padding-top: 2%; margin-right: 2%;">
+                                <div class="card" id="servicios" style="width: 35rem !important;"
+                                    [routerLink]="['/vistamascota',mascota.id]">
+                                    <div align="center">
+                                        <img class="card-img-top" src="{{mascota.imagenes}}"
+                                            style="margin-top: 5%; padding: 5%" alt="Card image cap">
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h4 class="card-text"><b>{{mascota.nombre}}</b></h4>
+                                        <h5 class="card-text">{{mascota.descripcion}}</h5>
+                                    </div>
+                                </div>
+                            </li>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+    <option *ngFor="let country of countries" [value]="country.name">{{country.nm}}</option>
+-->
