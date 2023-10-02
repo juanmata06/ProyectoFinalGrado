@@ -1,8 +1,7 @@
 # ProyectoFinalGrado
-Proyecto final de Grado Superior en Desarrollo Web
+Web Development final project grade
 
 
-Pet Keepers ofrece una plataforma dedicada a la prestación de servicios de mascotas a través de internet, utilizando la proximidad geográfica. 
-Los usuarios se pueden contactar entre sí a través del chat que proporcionamos y puedan organizar el tipo de servicio que quieran recibir o realizar. También para establecer el tiempo y precio.
+Pet Keepers offers a platform dedicated to providing pet services through the internet, utilizing geographic proximity. Users can contact each other through the chat we provide and can organize the type of service they want to receive or provide, as well as establish the time and price.
 
-Cada usuario podrá crear un perfil, en el que dependiendo de si presta o solicita un servicio tendrá una puntuación de los demás.
+Each user will be able to create a profile, in which, depending on whether they offer or request a service, they will have a rating from others.
